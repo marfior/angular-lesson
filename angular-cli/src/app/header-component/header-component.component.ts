@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {User} from "../Models/User";
+import {userInfo} from "os";
 
 @Component({
   selector: 'app-header-component',
@@ -8,7 +10,16 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class HeaderComponentComponent implements OnInit {
 
-  constructor() { }
+  userHeader: User = new User();
+
+  constructor() {
+
+    //let userHeader = new User();
+
+    this.userHeader.username = "Martinn";
+    this.userHeader.surname = "fior";
+
+  }
 
   ngOnInit() {
   }

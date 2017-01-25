@@ -1,2 +1,12 @@
 <app-navigation-component></app-navigation-component>
 <app-content-component></app-content-component>
+<app-blog-post title="My first Post!" [title]="secondPost">
+  <b>hello world!</b>
+</app-blog-post>
+
+<input type="text" [(ngModel)]="intxt"/>
+<input type="text" [(ngModel)]="intxt"/>
+
+
+// handle events on the outside parent
+<app-counter (onIncrement)="handleEvent($event)"></app-counter>

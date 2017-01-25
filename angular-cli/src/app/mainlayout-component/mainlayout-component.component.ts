@@ -8,9 +8,15 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class MainlayoutComponentComponent implements OnInit {
 
+  secondPost: string = "variable passed from mainlayout";
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  handleEvent(event){
+    console.log(event);
+  }
 }
