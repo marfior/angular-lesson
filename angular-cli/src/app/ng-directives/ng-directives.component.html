@@ -1,0 +1,23 @@
+// angular lesson 4
+// ngIf
+<button (click)="toggle = !toggle">Toggle</button>
+<span *ngIf="toggle">Testing the ngIf</span>
+
+<br/>
+// ngFor
+<table>
+  <tr *ngFor="let user of usersRegistered; let i = index;">
+    <td>{{i}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.surname}}</td>
+  </tr>
+</table>
+
+
+
+<h1>TODO LIST</h1>
+<table>
+  <tr *ngFor="let todo of todolist">
+    <td [class.done-task]="todo.complete">{{todo.task_name}}</td>
+  </tr>
+</table>

@@ -19,4 +19,6 @@ export class MainlayoutComponentComponent implements OnInit {
   handleEvent(event){
     console.log(event);
   }
+
+
 }

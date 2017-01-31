@@ -12,6 +12,9 @@ import { ContentComponentComponent } from './content-component/content-component
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CounterComponent } from './counter/counter.component';
+import { UserformComponent } from './userform/userform.component';
+import { DisplayuserformComponent } from './displayuserform/displayuserform.component';
+import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { CounterComponent } from './counter/counter.component';
     ContentComponentComponent,
     BlogPostComponent,
     WelcomeComponent,
-    CounterComponent
+    CounterComponent,
+    UserformComponent,
+    DisplayuserformComponent,
+    NgDirectivesComponent
   ],
   imports: [
     BrowserModule,

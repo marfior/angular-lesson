@@ -10,7 +10,7 @@ import {userInfo} from "os";
 })
 export class HeaderComponentComponent implements OnInit {
 
-  userHeader: User = new User();
+  userHeader: User = new User("Martin","Fjura","");
 
   constructor() {
 

@@ -10,3 +10,8 @@
 
 // handle events on the outside parent
 <app-counter (onIncrement)="handleEvent($event)"></app-counter>
+
+
+// exercise lesson 3 - register user and then pass out the user object to displayuserform
+<app-userform (onRegistration)="user = $event"></app-userform>
+<app-displayuserform [userRegistered]="user"></app-displayuserform>
