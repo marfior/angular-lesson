@@ -15,6 +15,7 @@ import { CounterComponent } from './counter/counter.component';
 import { UserformComponent } from './userform/userform.component';
 import { DisplayuserformComponent } from './displayuserform/displayuserform.component';
 import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
     CounterComponent,
     UserformComponent,
     DisplayuserformComponent,
-    NgDirectivesComponent
+    NgDirectivesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

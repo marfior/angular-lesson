@@ -16,8 +16,20 @@
 
 
 <h1>TODO LIST</h1>
-<table>
-  <tr *ngFor="let todo of todolist">
-    <td [class.done-task]="todo.complete">{{todo.task_name}}</td>
+<table class="table-responsive">
+  <!--<tr *ngFor="let todo of todolist">-->
+    <!--<td [class.done-task]="todo.complete">{{todo.task_name}}</td>-->
+  <!--</tr>-->
+
+  <tr>
+    <td>
+      <input type="text" [(ngModel)]="taskname"/>
+      <button (click)="addToDo()">Add</button>
+    </td>
   </tr>
+
+  <tr *ngFor="let todo of todolist">
+    <td [class.done-task]="todo.complete"><input type="checkbox" [(ngModel)]="todo.complete" [checked]="todo.complete"  />{{todo.task_name}}</td>
+  </tr>
+
 </table>

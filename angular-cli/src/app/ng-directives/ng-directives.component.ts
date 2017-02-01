@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {User} from "../Models/User";
 import {ToDo} from "../Models/ToDo";
 
@@ -9,6 +9,10 @@ import {ToDo} from "../Models/ToDo";
 })
 export class NgDirectivesComponent implements OnInit {
 
+  @Output() onAdd : EventEmitter<ToDo> = new EventEmitter();
+
+  private taskname: string;
+
   private toggle: boolean= false;
   private usersRegistered: Array<User> = [
     new User("Martin","Fiorentino",""),
@@ -16,6 +20,8 @@ export class NgDirectivesComponent implements OnInit {
     new User("Peter","Bartolo",""),
     new User("Kenneth","Borg",""),
   ]
+
+  private todo: ToDo;
 
   private todolist: Array<ToDo> = [
                       {
@@ -41,6 +47,15 @@ export class NgDirectivesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  public addToDo()
+  {
+    this.todo = <ToDo>{ task_name: this.taskname, complete: false};
+
+    this.todolist.push(this.todo);
+    this.onAdd.emit(this.todo)
   }
 
 }
