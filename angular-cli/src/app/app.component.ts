@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {ChatService} from "./Models/ChatService";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,8 @@ import {Component, ViewEncapsulation} from '@angular/core';
 export class AppComponent {
   title = 'app works!';
 
-  constructor() {
-
+  constructor(c: ChatService) {
+    c.doSomething();
   }
 
 

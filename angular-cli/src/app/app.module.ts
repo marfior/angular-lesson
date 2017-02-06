@@ -16,6 +16,12 @@ import { UserformComponent } from './userform/userform.component';
 import { DisplayuserformComponent } from './displayuserform/displayuserform.component';
 import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
 import { HighlightDirective } from './highlight.directive';
+import {ChatService} from "./Models/ChatService";
+import {Cookie} from "./Models/Cookie";
+import {CookieService} from "./Models/CookieService";
+import { EatCookieComponent } from './eat-cookie/eat-cookie.component';
+import { CreateCookieComponent } from './create-cookie/create-cookie.component';
+import { CookieInfoComponent } from './cookie-info/cookie-info.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +37,17 @@ import { HighlightDirective } from './highlight.directive';
     UserformComponent,
     DisplayuserformComponent,
     NgDirectivesComponent,
-    HighlightDirective
+    HighlightDirective,
+    EatCookieComponent,
+    CreateCookieComponent,
+    CookieInfoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ChatService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
