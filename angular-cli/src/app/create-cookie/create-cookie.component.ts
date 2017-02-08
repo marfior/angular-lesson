@@ -9,7 +9,7 @@ import {Cookie} from "../Models/Cookie";
 })
 export class CreateCookieComponent implements OnInit {
 
-  private cookie: Cookie = new Cookie("",0,"");
+  private cookie: Cookie = new Cookie(0,"",0,"");
 
   constructor(private cookieService: CookieService) {
 
@@ -20,8 +20,10 @@ export class CreateCookieComponent implements OnInit {
 
   public bakeCookie()
   {
-    this.cookieService.addCookie(new Cookie(this.cookie.cookieShape,this.cookie.cookieSizeInMillimeteres,this.cookie.cookieType));
-
+    this.cookieService.addCookie(new Cookie(this.cookie.id,
+                                            this.cookie.cookieShape,
+                                            this.cookie.cookieSizeInMillimetres,
+                                            this.cookie.cookieType));
   }
 
 }
