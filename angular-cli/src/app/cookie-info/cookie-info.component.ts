@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CookieService} from "../Models/CookieService";
+import {errorComparator} from "tslint/lib/test/lintError";
 
 @Component({
   selector: 'app-cookie-info',
@@ -12,10 +13,19 @@ export class CookieInfoComponent implements OnInit {
 
   constructor(private cookieService: CookieService) {
 
-   cookieService.getAll().subscribe();
-   //cookies => {
-    //this.cookies = cookies;
-    //}
+   cookieService.getAll().subscribe(
+     // Data call
+     (cookies)=> {
+       this.cookies = cookies;
+     },
+     // Error call
+     (err) => {
+       console.error('There was a problem calling the API');
+     },
+     // Finally call
+     () => {
+       console.log("API was called.");
+     });
 
   }
 

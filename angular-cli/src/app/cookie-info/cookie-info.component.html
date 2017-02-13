@@ -1,0 +1,12 @@
+<button (click)="getAll()" >Get All cookies</button>
+<table border="2">
+
+  <tr *ngFor="let cookie of cookies">
+    <td>{{cookie.id}}</td>
+    <td>{{cookie.cookieType}}</td>
+    <td>{{cookie.cookieSizeInMillimetres}}</td>
+    <td>{{cookie.cookieShape}}</td>
+    <td><button (click)="eatCookie(cookie.id)" >Eat</button> </td>
+  </tr>
+
+</table>
